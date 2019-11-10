@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	term "github.com/nsf/termbox-go"
+	term "github.com/gdamore/tcell/termbox"
 )
 
 func main() {
@@ -53,7 +53,7 @@ func main() {
 		default:
 			continue
 		}
-		term.SetCell(w, h, 'x', term.ColorBlack, term.AttrReverse)
+		term.SetCell(w, h, 'x', term.ColorBlack, 0)
 		term.Flush()
 	}
 }
